@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_v2/sites/login/components/login_buttons.dart';
-import 'package:login_v2/sites/login/components/login_icon.dart';
-import 'package:login_v2/sites/login/components/login_inputs.dart';
+import 'package:login_v2/sites/login/components/login.buttons.dart';
+import 'package:login_v2/sites/login/components/login.icon.dart';
+import 'package:login_v2/sites/login/components/login.inputs.dart';
 
-class DesktopLogin extends StatelessWidget {
-  const DesktopLogin(
+class LoginDesktop extends StatelessWidget {
+  const LoginDesktop(
       {super.key,
       required this.passwordController,
       required this.usernameController,
