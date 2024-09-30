@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_v2/layout/centered_floating_card.dart';
 import 'package:login_v2/sites/login/components/login.buttons.dart';
 import 'package:login_v2/sites/login/components/login.icon.dart';
 import 'package:login_v2/sites/login/components/login.inputs.dart';
@@ -25,34 +26,28 @@ class LoginDesktop extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.deepPurple[300],
       body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 50),
-            child: Container(
-              width: 600,
-              constraints: const BoxConstraints(minHeight: 700, minWidth: 400),
-              child: Card(
-                color: Colors.deepPurple[200],
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Icon & Hello Message
-                    const LoginIcon(),
-                    const SizedBox(height: 40),
+        child: CenteredFloatingCard(
+          child: Container(
+            width: 600,
+            constraints: const BoxConstraints(minHeight: 700, minWidth: 400),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Icon & Hello Message
+                const LoginIcon(),
+                const SizedBox(height: 40),
 
-                    // Username & Password Inputs
-                    LoginInputs(
-                      usernameController: usernameController,
-                      passwordController: passwordController,
-                      onForgotPassword: onForgotPassword,
-                    ),
-                    const SizedBox(height: 10),
-
-                    // Login Button
-                    LoginButtons(onLogin: onLogin, onSignUp: onSignUp),
-                  ],
+                // Username & Password Inputs
+                LoginInputs(
+                  usernameController: usernameController,
+                  passwordController: passwordController,
+                  onForgotPassword: onForgotPassword,
                 ),
-              ),
+                const SizedBox(height: 10),
+
+                // Login Button
+                LoginButtons(onLogin: onLogin, onSignUp: onSignUp),
+              ],
             ),
           ),
         ),

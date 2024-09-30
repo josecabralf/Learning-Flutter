@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_v2/layout/centered_floating_card.dart';
 import 'package:login_v2/sites/login/components/login.buttons.dart';
 import 'package:login_v2/sites/login/components/login.icon.dart';
 import 'package:login_v2/sites/login/components/login.inputs.dart';
@@ -24,35 +25,29 @@ class LoginMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple[300],
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 50),
-          child: Card(
-            color: Colors.deepPurple[200],
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Icon & Hello Message
-                const LoginIcon(iconSize: 100, fontSize: 16),
-                const SizedBox(height: 20),
+      body: CenteredFloatingCard(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Icon & Hello Message
+            const LoginIcon(iconSize: 100, fontSize: 16),
+            const SizedBox(height: 20),
 
-                // Username Field
-                LoginInputs(
-                  usernameController: usernameController,
-                  passwordController: passwordController,
-                  onForgotPassword: onForgotPassword,
-                  innerSpacing: 5,
-                ),
-                const SizedBox(height: 10),
-
-                // Login Button
-                LoginButtons(
-                  onLogin: onLogin,
-                  onSignUp: onSignUp,
-                )
-              ],
+            // Username Field
+            LoginInputs(
+              usernameController: usernameController,
+              passwordController: passwordController,
+              onForgotPassword: onForgotPassword,
+              innerSpacing: 5,
             ),
-          ),
+            const SizedBox(height: 10),
+
+            // Login Button
+            LoginButtons(
+              onLogin: onLogin,
+              onSignUp: onSignUp,
+            )
+          ],
         ),
       ),
     );
