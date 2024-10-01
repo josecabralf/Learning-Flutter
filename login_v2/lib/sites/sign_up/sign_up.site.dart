@@ -12,13 +12,18 @@ class SignUpSite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
-        mobileChild: SignUpMobile(
-            usernameController: signupService.usernameController,
-            passwordController: signupService.passwordController,
-            onSignUp: signupService.onSignUp),
-        desktopChild: SignUpDesktop(
-            usernameController: signupService.usernameController,
-            passwordController: signupService.passwordController,
-            onSignUp: signupService.onSignUp));
+      mobileChild: SignUpMobile(
+          usernameController: signupService.usernameController,
+          passwordController: signupService.passwordController,
+          confirmPasswordController: signupService.confirmPasswordController,
+          onSignUp: signupService.onSignUp,
+          onCancel: signupService.onCancel),
+      desktopChild: SignUpDesktop(
+          usernameController: signupService.usernameController,
+          passwordController: signupService.passwordController,
+          confirmPasswordController: signupService.confirmPasswordController,
+          onSignUp: signupService.onSignUp,
+          onCancel: signupService.onCancel)
+    );
   }
 }

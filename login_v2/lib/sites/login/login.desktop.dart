@@ -23,32 +23,29 @@ class LoginDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.deepPurple[300],
-      body: SingleChildScrollView(
-        child: CenteredFloatingCard(
-          child: Container(
-            width: 600,
-            constraints: const BoxConstraints(minHeight: 700, minWidth: 400),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Icon & Hello Message
-                const LoginIcon(),
-                const SizedBox(height: 40),
+    return SingleChildScrollView(
+      child: CenteredFloatingCard(
+        child: Container(
+          width: 600,
+          constraints: const BoxConstraints(minHeight: 700, minWidth: 400),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Icon & Hello Message
+              const LoginIcon(),
+              const SizedBox(height: 40),
 
-                // Username & Password Inputs
-                LoginInputs(
-                  usernameController: usernameController,
-                  passwordController: passwordController,
-                  onForgotPassword: onForgotPassword,
-                ),
-                const SizedBox(height: 10),
+              // Username & Password Inputs
+              LoginInputs(
+                usernameController: usernameController,
+                passwordController: passwordController,
+                onForgotPassword: onForgotPassword,
+              ),
+              const SizedBox(height: 10),
 
-                // Login Button
-                LoginButtons(onLogin: onLogin, onSignUp: onSignUp),
-              ],
-            ),
+              // Login Button
+              LoginButtons(onLogin: onLogin, onSignUp: onSignUp),
+            ],
           ),
         ),
       ),

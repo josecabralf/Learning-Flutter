@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 
 class PasswordInput extends StatefulWidget {
   final TextEditingController controller;
+  
+  final String hintText;
 
   const PasswordInput({
     super.key,
     required this.controller,
+    this.hintText = 'Password',
   }) : super();
 
   @override
@@ -34,7 +37,7 @@ class PasswordInputState extends State<PasswordInput> {
           fillColor: Colors.deepPurple[100],
           filled: true,
 
-          hintText: 'Password',
+          hintText: widget.hintText,
           hintStyle: const TextStyle(
             color: Color.fromARGB(255, 121, 121, 121),
             fontWeight: FontWeight.w400,

@@ -4,10 +4,15 @@ class ButtonInput extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
+  final Color color;
+  final Color fontColor;
+
   const ButtonInput({
     super.key,
     required this.text,
     required this.onPressed,
+    this.color = Colors.deepPurple,
+    this.fontColor = const Color.fromARGB(255, 253, 244, 235),
   });
 
   @override
@@ -18,14 +23,14 @@ class ButtonInput extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         margin: const EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
-          color: Colors.deepPurple,
+          color: color,
           borderRadius: BorderRadius.circular(5),
         ),
         child: Center(
           child: Text(
             text,
-            style: const TextStyle(
-              color: Color.fromARGB(255, 253, 244, 235),
+            style: TextStyle(
+              color: fontColor,
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
