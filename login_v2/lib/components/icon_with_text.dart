@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 
-class SignUpIcon extends StatelessWidget {
-  const SignUpIcon({super.key, this.iconSize = 200, this.fontSize = 16})
+class IconWithText extends StatelessWidget {
+  const IconWithText({super.key, required this.text, required this.icon,
+  this.iconSize = 200, this.fontSize = 16})
       : super();
 
   final double iconSize;
   final double fontSize;
 
+  final String text;
+  final IconData icon;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(Icons.person, size: iconSize, color: Colors.deepPurple[600]),
-        Text('Fill up the form to sign up!',
+        Icon(icon, size: iconSize, color: Colors.deepPurple[600]),
+        Text(text,
           style: TextStyle(fontSize: fontSize, color: Colors.deepPurple[600])
         ),
       ],

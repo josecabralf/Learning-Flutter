@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:login_v2/components/icon_with_text.dart';
 import 'package:login_v2/layout/centered_floating_card.dart';
 import 'package:login_v2/sites/sign_up/components/sign_up.buttons.dart';
-import 'package:login_v2/sites/sign_up/components/sign_up.icon.dart';
 import 'package:login_v2/sites/sign_up/components/sign_up.inputs.dart';
 
 class SignUpMobile extends StatelessWidget {
@@ -28,7 +28,7 @@ class SignUpMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Icon & Hello Message
-          const SignUpIcon(),
+          const IconWithText(text: 'Fill up the form to sign up!', icon: Icons.person, iconSize: 100, fontSize: 16,),
           const SizedBox(height: 40),
       
           // Username, Password & ConfirmPassword Inputs

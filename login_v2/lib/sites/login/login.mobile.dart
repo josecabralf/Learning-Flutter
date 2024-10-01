@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:login_v2/components/icon_with_text.dart';
 import 'package:login_v2/layout/centered_floating_card.dart';
 import 'package:login_v2/sites/login/components/login.buttons.dart';
-import 'package:login_v2/sites/login/components/login.icon.dart';
 import 'package:login_v2/sites/login/components/login.inputs.dart';
 
 class LoginMobile extends StatelessWidget {
@@ -28,7 +28,7 @@ class LoginMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Icon & Hello Message
-          const LoginIcon(iconSize: 100, fontSize: 16),
+          const IconWithText(text: 'Hello, pleasure to see you!', icon: Icons.person, iconSize: 100, fontSize: 16,),
           const SizedBox(height: 20),
 
           // Username Field

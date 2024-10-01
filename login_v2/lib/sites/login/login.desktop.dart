@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:login_v2/components/icon_with_text.dart';
 import 'package:login_v2/layout/centered_floating_card.dart';
 import 'package:login_v2/sites/login/components/login.buttons.dart';
-import 'package:login_v2/sites/login/components/login.icon.dart';
 import 'package:login_v2/sites/login/components/login.inputs.dart';
 
 class LoginDesktop extends StatelessWidget {
@@ -32,7 +32,7 @@ class LoginDesktop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Icon & Hello Message
-              const LoginIcon(),
+              const IconWithText(text: 'Hello, pleasure to see you!', icon: Icons.person,),
               const SizedBox(height: 40),
 
               // Username & Password Inputs
